@@ -23,6 +23,8 @@ namespace DZ
                 }
                 if (x is char && y is char)
                     return ((char)x == (char)y) ? 0 : ((char)x > (char)y) ? 1 : -1;
+                if (x is double && y is double)
+                    return ((double)x == (double)y) ? 0 : ((double)x > (double)y) ? 1 : -1;
                 else return -1;
             }
         }
@@ -31,7 +33,7 @@ namespace DZ
             /*
              * Создать массив типа ArrayList, наполните разными данными (int, string и тп.) и отсортируйте каждый тип с помощью пользовательского интерфейса IComparer
              */
-            var arr = new ArrayList() { 1, 6, 111, 43, 'c', 11, 'b', 'a', "hi", 'k', "qq" };
+            var arr = new ArrayList() { 1, 6, 111, 43, 'c', 11, 'b', 'a', 11.5, "hi", 'k', "qq", 45.5 };
             arr.Sort(new Comparer());
             foreach (var item in arr)
             {
